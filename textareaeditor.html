@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Editor</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+<body>
+	<!-- Start Editor  -->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3">
+				<textarea name="" id="textarea1" class="form-control" rows="4"></textarea>
+				<textarea name="" id="textarea2" class="form-control" rows="4"></textarea>
+				<code>https://www.tinymce.com/docs/demo/basic-example/</code>
+			</div>
+			
+		</div>
+	</div>
+	<!-- End Editor -->
+	
+	
+	
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="http://cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: '#textarea1',
+            menubar: false,
+            plugins: [
+                'advlist'
+            ],
+            toolbar: 'undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist '
+        });
+		// textarea2
+        tinymce.init({
+			selector: '#textarea2',
+			menubar: false,
+			plugins: [
+			'advlist autolink lists link image charmap print preview anchor',
+			'searchreplace visualblocks code fullscreen',
+			'insertdatetime media table contextmenu paste code'
+			],
+			toolbar: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+			content_css: '//www.tinymce.com/css/codepen.min.css'
+		});
+
+    </script>
+</body>
+</html>
